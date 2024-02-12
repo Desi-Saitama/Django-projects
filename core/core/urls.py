@@ -28,6 +28,7 @@ urlpatterns = [
     path('sucess-page/', sucess_page, name="sucess"),
     path('admin/', admin.site.urls),
     path('delete-receipe/<id>/', delete_receipe, name='delete_receipe'),
+    path('update-receipe/<id>/', update_receipe, name='update_receipe'),
 ]
 
 if settings.DEBUG:
