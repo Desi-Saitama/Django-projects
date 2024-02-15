@@ -3,7 +3,7 @@ from .models import *
 from django.http import HttpResponse
 from django.contrib.auth.models import User
 from django.contrib import messages
-from django.contrib.auth import authenticate, login
+from django.contrib.auth import authenticate, login, logout
 
 # Create your views here.
 def receipes(request):
@@ -78,6 +78,11 @@ def login_page(request):
             return redirect('/receipes/')
 
     return render(request, 'login.html')
+
+
+def logout_page(request):
+    logout(request)
+    return redirect('/login/')
 
 def register(request):
 
